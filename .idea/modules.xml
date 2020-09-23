@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/CGB-4JT.iml" filepath="$PROJECT_DIR$/.idea/CGB-4JT.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_demo/springboot_demo.iml" filepath="$PROJECT_DIR$/springboot_demo/springboot_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_outofmemory/springboot_outofmemory.iml" filepath="$PROJECT_DIR$/springboot_outofmemory/springboot_outofmemory.iml" />
     </modules>
   </component>
 </project>

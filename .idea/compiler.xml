@@ -8,10 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_demo" />
+        <module name="springboot_outofmemory" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springboot_demo" target="1.8" />
+      <module name="springboot_outofmemory" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
