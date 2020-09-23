@@ -1,0 +1,19 @@
+server:
+  port: 8090    #定义端口
+  servlet:
+    context-path: /   #定义项目的发布路径
+spring:
+  datasource:
+    #driver-class-name: com.mysql.jdbc.Driver   springboot程序采用默认的配置
+    url: jdbc:mysql://localhost:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: 123456
+
+mybatis:
+  #定义别名包
+  type-aliases-package: com.jt.pojo
+  #加载user标签的mapper文件
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+  #开启驼峰映射
+  configuration:
+    map-underscore-to-camel-case: true
