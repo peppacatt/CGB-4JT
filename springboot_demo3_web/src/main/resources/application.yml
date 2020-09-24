@@ -1,0 +1,29 @@
+server:
+  port: 8090    #\u5B9A\u4E49\u7AEF\u53E3
+  servlet:
+    context-path: /   #\u5B9A\u4E49\u9879\u76EE\u7684\u53D1\u5E03\u8DEF\u5F84
+
+spring:
+  datasource:
+    #driver-class-name: com.mysql.jdbc.Driver   springboot\u7A0B\u5E8F\u91C7\u7528\u9ED8\u8BA4\u7684\u914D\u7F6E
+    url: jdbc:mysql://localhost:3306/jtdb?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true
+    username: root
+    password: 123456
+
+  mvc:         #\u5F15\u5165mvn\u914D\u7F6E
+    view:
+      prefix: /WEB-INF/     # /\u9ED8\u8BA4\u4EE3\u8868\u6839\u76EE\u5F55 src/main/webapp
+      suffix: .jsp
+
+mybatis-plus:
+  #\u5B9A\u4E49\u522B\u540D\u5305
+  type-aliases-package: com.jt.pojo
+  #\u52A0\u8F7Duser\u6807\u7B7E\u7684mapper\u6587\u4EF6
+  mapper-locations: classpath:/mybatis/mappers/*.xml
+  #\u5F00\u542F\u9A7C\u5CF0\u6620\u5C04
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.jt: debug
