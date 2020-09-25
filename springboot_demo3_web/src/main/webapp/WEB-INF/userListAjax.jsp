@@ -6,7 +6,7 @@
 <title>您好Springboot</title>
 </head>
 <body>
-	<table border="1px" width="65%" align="center">
+	<table id="tab" border="1px" width="65%" align="center">
 		<tr>
 			<td colspan="6" align="center"><h3>学生信息</h3></td>
 		</tr>
@@ -27,5 +27,54 @@
 			</tr>
 		</c:forEach>
 	</table>
+
+
+	<script type="application/javascript" src="/js/jquery-3.4.1.min.js"></script>
+	<script type="application/javascript">
+		$(function () {
+			getObjects()
+		})
+
+		function getObjects() {
+			// modeGet()
+			modeAjax()
+		}
+
+		function modeGet() {
+			$.get("findAjax", function (result) {
+				showPerTrs(result)
+			})
+		}
+		
+		function modeAjax() {
+			$.ajax({
+				type: "get",
+				url: "findAjax",
+				async: true,
+				success: function (result) {
+					showPerTrs(result)
+				},
+				error: function () {
+					alert("请求异常...")
+				}
+			})
+		}
+
+		function showPerTrs(result) {
+			console.log(result)
+			let trs = ""
+			for(let user of result){
+				<%--trs += `<tr align="center">--%>
+				<%--			<td>${uer.id}</td>--%>
+				<%--			<td>${user.name}</td>--%>
+				<%--			<td>${user.age}</td>--%>
+				<%--			<td>${user.sex}</td>--%>
+				<%--		</tr>`--%>
+				trs += "<tr align='center'><td>"+user.id+"</td><td>"+user.name+"</td><td>"+user.age+"</td><td>"+user.sex+"</td></tr>"
+			}
+			$("#tab").append(trs)
+
+		}
+	</script>
 </body>
 </html>
