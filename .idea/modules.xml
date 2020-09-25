@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/CGB-4JT.iml" filepath="$PROJECT_DIR$/.idea/CGB-4JT.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt/jt.iml" filepath="$PROJECT_DIR$/jt/jt.iml" />
       <module fileurl="file://$PROJECT_DIR$/jt/jt-common/jt-common.iml" filepath="$PROJECT_DIR$/jt/jt-common/jt-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jt/jt-manage/jt-manage.iml" filepath="$PROJECT_DIR$/jt/jt-manage/jt-manage.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_demo2_mybatis/springboot_demo2_mybatis.iml" filepath="$PROJECT_DIR$/springboot_demo2_mybatis/springboot_demo2_mybatis.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_demo3_web/springboot_demo3_web.iml" filepath="$PROJECT_DIR$/springboot_demo3_web/springboot_demo3_web.iml" />
     </modules>

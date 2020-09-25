@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_demo3_web" />
+        <module name="jt-manage" />
         <module name="springboot_demo2_mybatis" />
         <module name="jt-common" />
       </profile>
@@ -15,6 +16,7 @@
     <bytecodeTargetLevel>
       <module name="jt" target="1.8" />
       <module name="jt-common" target="1.8" />
+      <module name="jt-manage" target="1.8" />
       <module name="springboot_demo2_mybatis" target="1.8" />
       <module name="springboot_demo3_web" target="1.8" />
     </bytecodeTargetLevel>
@@ -22,6 +24,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="jt-common" options="-parameters" />
+      <module name="jt-manage" options="-parameters" />
       <module name="springboot_demo2_mybatis" options="-parameters" />
     </option>
   </component>
