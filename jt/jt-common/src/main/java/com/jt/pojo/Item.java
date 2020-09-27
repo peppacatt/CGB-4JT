@@ -12,6 +12,7 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain=true)
 public class Item extends BasePojo{
+	private static final long serialVersionUID = -1615073238551379762L;
 	@TableId(type=IdType.AUTO)
 	private Long id;				//商品id
 	private String title;			//商品标题
