@@ -27,7 +27,8 @@ public class ItemServiceImpl implements ItemService {
 
 	@Override
 	public void saveItem(Item item) {
-		item.setStatus(1).setCreated(new Date()).setUpdated(item.getCreated());
+//		item.setStatus(1).setCreated(new Date()).setUpdated(item.getCreated());
+		item.setStatus(1);
 		itemMapper.insert(item);
 	}
 }

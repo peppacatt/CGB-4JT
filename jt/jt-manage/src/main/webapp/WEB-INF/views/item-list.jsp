@@ -98,7 +98,12 @@
         					 $("#itemeEditForm .params td").eq(1).html(html);
         				}
         			});
-        			
+
+        			var cid = data.cid
+                    $.get("/item/cat/queryItemName", {"itemCatId":cid}, function (data) {
+                        $("#itemeEditForm input[name='cid']").siblings("span").text(data)
+                    })
+
         			KindEditorUtil.init({
         				"pics" : data.image,
         				"cid" : data.cid,
