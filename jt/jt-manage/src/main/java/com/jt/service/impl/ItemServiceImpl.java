@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.jt.mapper.ItemMapper;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -22,5 +23,11 @@ public class ItemServiceImpl implements ItemService {
 		List<Item> itemList = itemMapper.findItemByPage(startIndex, rows);
 		Long total = Long.valueOf(itemMapper.selectCount(null));
 		return new EasyUITable(total, itemList);
+	}
+
+	@Override
+	public void saveItem(Item item) {
+		item.setStatus(1).setCreated(new Date()).setUpdated(item.getCreated());
+		itemMapper.insert(item);
 	}
 }
